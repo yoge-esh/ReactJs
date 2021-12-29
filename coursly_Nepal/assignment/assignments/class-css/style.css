@@ -1,0 +1,9 @@
+/* it is use for the designing the html */
+/* external css */
+
+/* why to use external css: 
+during the production process we make lots of pages and and if we use internal css then we need to write a css for many times so external file is linked */
+*{
+    margin: 0;
+    padding: 0;
+}

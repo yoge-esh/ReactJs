@@ -1,0 +1,118 @@
+<!-- DOCTYPE: gives the information about version and given the information to browset to render file in organized way -->
+<!DOCTYPE html>
+<!-- tegs are use in it so it is called html, it describe the webpage -->
+<html lang="en">
+
+<head>
+    <!-- meta tages gives the information about the web pages which help the website for seo ranking  -->
+    <meta charset="UTF-8">
+    <!-- og = open graph -->
+    <!-- if someone is using our website links then it will go with card view and information -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* internal css */
+        .News_article {
+            border: 1px solid green;
+        }
+
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Style all elements with the class name "city" */
+        .city {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- with the help of body, headers, elements etc we make the sketch the html  -->
+
+    <!-- starting tag: content: ending tag -->
+    <h1>hello Nepal</h1>
+
+    <!-- elements are the mediators of providing a structure to webpage contents -->
+
+    <!-- attribute are the features, it gives the information about the the contain which we structure  they are use to describe the feature of the content of the html-->
+
+    <!-- <a href=""></a>  use to make a link -->
+
+    <ul>
+        <li><b>Home</b></li>
+    </ul>
+
+    <!-- HTML block and enline enline elements 
+    blocK: it occupy all the width  
+    inline: it occupy only required space only
+-->
+    <!-- block elements -->
+    <h1></h1>this is block level elements</h1>
+    <p>this is block level elements</p>
+
+    <!-- inline elements -->
+    <span>this is inline block</span>
+
+    <!-- html class: it can repeatedly use, lets see the example hete  -->
+    <!-- in class: we can give same behaviour to members of class -->
+    <div class="News_article">
+        <h2>grouping the class members</h2>
+        <p>we are learning about class here, which can be use multi time</p>
+    </div>
+
+
+    <!-- id attribute: use for the uniqueness -->
+    <h1 id="myHeader">My Cities</h1>
+
+    <!-- Multiple elements with same class -->
+    <!-- <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France.</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p> -->
+
+
+    <!-- iframe -->
+    <!-- An inline frame is used to embed another document within the current HTML document. -->
+    <iframe src="https://www.onlinekhabar.com/" style="height:40px; width:80px; border: none;" title="description"></iframe>
+    <!-- inline css -->
+
+    <!-- iframe is less secure so trusted sites like, facebook, instagram doest not provide the access of it..
+        because they are third party sites and the data can be take stolen from here..  -->
+
+
+    <!-- form -->
+    <form action="">
+        Name: <input type="text">
+        <button>submit</button>
+    </form>
+    
+
+
+
+
+
+
+
+
+
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day!";
+        }
+    </script>
+</body>
+
+</html>
