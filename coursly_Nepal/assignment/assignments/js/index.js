@@ -52,7 +52,7 @@ function main()
 {
   console.log('main');
 
-  setTimeout(f1(), 0);
+  setTimeout(f1(), 0); // it act as a syncronous function 
 
   f2();
 }
