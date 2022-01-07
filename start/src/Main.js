@@ -5,8 +5,8 @@ export default function Main() {
     const randomHexColor = () => {
         const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
         // round the number down and return intiger => math.floor 
-        // toString => gives has code that we need 
-        // # => at beganing is to make has color code 
+        // toString => gives hexa code that we need 
+        // # => at beganing # is use to make hax color code 
         setHex(randomColor)
     }
     return (
@@ -14,8 +14,10 @@ export default function Main() {
             <h1>{hex}</h1>
             <button onClick={randomHexColor}>Click to get random number</button>
             
-            {/* to copy the color  */}
-            {/* <button onClick={() => navigator.clipboard.writeText(hex)}>Click to copy the # code</button> */}
         </div>
     )
 }
+
+
+
+// if we use someone's code to developen something is called are called depeloper 

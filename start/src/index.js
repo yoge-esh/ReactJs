@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 // import Main from './Main'
+// import Bgcolor from './Bgcolor'
 import reportWebVitals from './reportWebVitals';
+import Randomcolor from './Randomcolor';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* my practise file */}
+    {/* <App /> */}
+    
+    {/* CourslyNepal file */}
     {/* <Main/> */}
+
+    {/* test of changing bg color */}
+    {/* <Bgcolor/> */}
+
+    <Randomcolor/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
