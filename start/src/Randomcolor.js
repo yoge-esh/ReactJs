@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import "./App.css";
 export default function Randomcolor() {
-    const [color, setColor] = useState('crimson');
+    const [color, setColor] = useState('crimson'); 
     const useColor = ['green', 'red', 'blue', 'yellow']
 const selectColor = () =>
 {
