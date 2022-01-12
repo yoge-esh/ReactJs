@@ -5,7 +5,8 @@ import './index.css';
 // import Main from './Main'
 // import Bgcolor from './Bgcolor'
 import reportWebVitals from './reportWebVitals';
-import Randomcolor from './Randomcolor';
+// import Randomcolor from './Randomcolor';
+import Seed from './Seed'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +19,11 @@ ReactDOM.render(
     {/* test of changing bg color */}
     {/* <Bgcolor/> */}
 
-    <Randomcolor/>
+    {/* random color */}
+    {/* <Randomcolor/> */}
+
+    {/* Birthday Remainder */}
+    <Seed/>
 
   </React.StrictMode>,
   document.getElementById('root')
