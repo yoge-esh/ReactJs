@@ -16,15 +16,6 @@ function App() {
         <TextForms heading="Enter a text to Analyze" />
       </div> */}
 
-      
-      {/* working on birthday reminder  */}
-      <main>
-        <section className="container">
-          <h3>{people.length} birthdays today</h3>
-          <List people={people} />
-          <button onClick={() => setPeople([])}>clear all</button>
-        </section>
-      </main>
 
       {/* <Navbar/> */}
 
