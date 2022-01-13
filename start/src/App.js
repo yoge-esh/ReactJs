@@ -1,20 +1,16 @@
-// import logo from './logo.svg';
-// import "./App.css";
-// import Navbar from "./Components/Navbar";
-// import TextForms from "./Components/TextForms";
-
-// birthday remainder 
-import "./index1.css"
-import List from "./Components/List"
+import logo from './logo.svg';
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import TextForms from "./Components/TextForms";
 
 
 function App() {
   return (
     <>
-        {/* <Navbar title="Start Project" aboutText="About Us" />
+        <Navbar title="Start Project" aboutText="About Us" />
       <div className="container my-3">
         <TextForms heading="Enter a text to Analyze" />
-      </div> */}
+      </div>
 
 
       {/* <Navbar/> */}

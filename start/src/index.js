@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-// import Main from './Main'
-// import Bgcolor from './Bgcolor'
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Randomcolor from './Randomcolor';
 import Seed from './Seed'
@@ -11,16 +9,10 @@ import Seed from './Seed'
 ReactDOM.render(
   <React.StrictMode>
     {/* my practise file */}
-    {/* <App /> */}
-    
-    {/* CourslyNepal file */}
-    {/* <Main/> */}
+    <App />
 
-    {/* test of changing bg color */}
-    {/* <Bgcolor/> */}
 
-    {/* random color */}
-    {/* <Randomcolor/> */}
+
 
     {/* Birthday Remainder */}
     <Seed/>
