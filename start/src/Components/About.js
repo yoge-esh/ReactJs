@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function About() {
+export default function About(props) {
   
   // i try to make a dark mode enable and desable but the code is not working 
   const [myStyle, setMyStyle] = useState({
@@ -30,7 +30,7 @@ export default function About() {
   }
 
   return (
-    <div>
+    <div >
       <h1 className="my-4">About Us</h1>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">

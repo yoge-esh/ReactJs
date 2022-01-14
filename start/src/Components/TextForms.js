@@ -44,30 +44,30 @@ export default function TextForms(props) {
     setText(newText.join(" "));
   }
 
-  // functions to make a dark mode 
-  const [myStyle, setMyStyle] = useState({
-    color: "white",
-    backgroundColor: "black",
-  });
+  // // functions to make a dark mode 
+  // const [myStyle, setMyStyle] = useState({
+  //   color: "white",
+  //   backgroundColor: "black",
+  // });
 
-  const [btntext, setBtnText] = useState("Enable Dark mode");
+  // const [btntext, setBtnText] = useState("Enable Dark mode");
 
-  const toggleStyle = () => {
-    if (myStyle.color === "black") {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-      setBtnText("Enable Liark Mode");
-    } else {
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText("Enable Dark Mode");
-    }
-    console.log('enable dark and light mode')
-  };
+  // const toggleStyle = () => {
+  //   if (myStyle.color === "black") {
+  //     setMyStyle({
+  //       color: "white",
+  //       backgroundColor: "black",
+  //     });
+  //     setBtnText("Enable Liark Mode");
+  //   } else {
+  //     setMyStyle({
+  //       color: "black",
+  //       backgroundColor: "white",
+  //     });
+  //     setBtnText("Enable Dark Mode");
+  //   }
+  //   console.log('enable dark and light mode')
+  // };
 
   return (
     <>
@@ -80,7 +80,8 @@ export default function TextForms(props) {
             id="exampleFormControlTextarea1"
             rows="12"
             // enabling the dark bode in text area 
-            style = {myStyle} 
+            // style = {myStyle}
+            style={{backgroundColor: props.mode === 'dark'?'light':'white', color:props.mode === 'dark'?'white':'black'}} 
             onChange={handleOnClick}
             value={text}
           ></textarea>
@@ -112,9 +113,9 @@ export default function TextForms(props) {
         </button>
 
         {/* switch between dark and light maode  */}
-        <button className="btn btn-primary mx-1" onClick={toggleStyle}>
+        {/* <button className="btn btn-primary mx-1" onClick={toggleStyle}>
           {btntext}
-        </button>
+        </button> */}
 
         {/* remove extra spaces */}
         <button className="btn btn-primary mx-1" onClick={extraSpaces}>
@@ -128,7 +129,7 @@ export default function TextForms(props) {
 
       </div>
 
-      <div className="container my-2">
+      <div className="container my-2" style={{color: props.mode === 'dark'?'white':'black'}}>
         <h2>Your Text summary is here</h2>
         <p>
           {text.split(" ").length} words and {text.length} length

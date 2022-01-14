@@ -1,11 +1,12 @@
 import React from "react";
-import PropTypes from 'prop-types'
-
+import PropTypes from "prop-types";
 
 export default function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             {props.title}
@@ -46,33 +47,41 @@ export default function Navbar(props) {
               </button>
             </form>
           </div>
+          {/* using an turnary operator to make a text of nav bar change accordingly */}
+          <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}> /
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              onClick={props.toggleMode}
+              id="flexSwitchCheckDefault"
+            />
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault"> Enable Dark Mode
+            </label>
+          </div>
         </div>
       </nav>
     </div>
   );
 }
 
-
 // propTypes()
 Navbar.prototype = {
-    // propsName.ptototype.string => saying that there must be string value, other is not acceptable 
-    // is we pass number here now, it will throw an error 
-    title: PropTypes.string, 
-    aboutText: PropTypes.string
-}
+  // propsName.ptototype.string => saying that there must be string value, other is not acceptable
+  // is we pass number here now, it will throw an error
+  title: PropTypes.string,
+  aboutText: PropTypes.string,
+};
 
 // isRequired()
 // isRequired : means must have value in place of that props
 Navbar.prototype = {
-    title:PropTypes.string.isRequired // now the title is required, but as we are passing an default value it wont throw and error, 
-}
-
+  title: PropTypes.string.isRequired, // now the title is required, but as we are passing an default value it wont throw and error,
+};
 
 // default props
 //  default props : incase we dont keep the valeu then the default value will be assign in place of title and about
 Navbar.defaultProps = {
-    title: 'set title here', 
-    aboutText: 'set about here'
-}
-
-
+  title: "set title here",
+  aboutText: "set about here",
+};
