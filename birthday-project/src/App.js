@@ -1,43 +1,54 @@
-import React, { useState } from "react";
-import "./App2.css"
-import JSONDATA from './MOCK_DATA.json'
+import { useState } from 'react'
+import { data } from './data'
+import "./App.css";
 
-const App = () => {
-  // const [people, setPeople] = useState(data);
-  const [searchText, setSearchtext] = useState("");
+function App() {
+  const [people, setPeople] = useState(data)
+  const [searchText, setSearchText] = useState('')
+
+  const removePerson = (id) => {
+    let newPerson = people.filter((person) => person.id !== id)
+    setPeople(newPerson)
+  }
 
   return (
-    <div className="App2">
-      <input
-        type="text"
-        placeholder="serach hare ..."
-        onChange={(event) => {
-          setSearchtext(event.target.value);
-        }}
-      />
-      {JSONDATA.filter = ((val) => {
-          if (searchText === "") {
-            return val;
-          } else if (
-            val.name.toLowerCase().includes(searchText.toLowerCase())
-          ) {
-            return val;
-          }
-        })
-        .map((val, key) => {
-          return (
-            <div key={key}>
-              <p>{val.name}</p>
-            </div>
-          );
-        })}
-      <section className="container">
-        <h3>{data.length} Birthdays Today</h3>
-        <p>people={people}</p>
-        <button onClick={() => setPeople([])}>clear all</button>
-      </section>
-    </div>
-  );
-};
+    <>
+    <input type="search" name="search" id="search peoples" placeholder='search here...' className='searchBar' onChange={event => {setSearchText(event.target.value)}} />
+      <h3 className='birthdayTitle'>
+        {people.length} birthdays today
+      </h3>
+      {people.filter((value) => {
+        if (searchText === '')
+        {
+          return value
+        }
+        else if (value.name.toLowerCase().includes(searchText.toLowerCase()))
+        {
+          return value
+        }
+      }).map((person) => {
+        const { id, name, age, image } = person
 
-export default App;
+        return (
+          <div className='container' key={id}>
+            <div className='avatar'>
+              <img src={image} alt={name} />
+            </div>
+            <div className="names">
+              <h3>{name}</h3>
+              <p>{age} years</p>
+
+            </div>
+            <div className='button'>
+              <button className='btn' onClick={() => removePerson(id)}>
+                Dismiss
+              </button>
+            </div>
+          </div>
+        )
+      })}
+    </>
+  )
+}
+
+export default App
