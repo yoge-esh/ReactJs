@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 const App = () => {
@@ -37,14 +37,14 @@ const App = () => {
   function deleteTodo(id) {
     let updatedTodos = [...todos].filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
-    setDisable(true)
+    setDisable(true);
   }
-  
+
   function toggleComplete(id) {
     let updatedTodos = [...todos].map((todo) => {
       if (todo.id === id) {
         todo.completed = !todo.completed;
-        setDisable(false)
+        setDisable(false);
       }
       return todo;
     });
@@ -79,7 +79,7 @@ const App = () => {
             <input
               type="checkbox"
               id="completed"
-              checked={todo.completed} 
+              checked={todo.completed}
               onChange={() => toggleComplete(todo.id)}
             />
             {todo.id === todoEditing ? (
@@ -98,7 +98,9 @@ const App = () => {
               <button onClick={() => setTodoEditing(todo.id)}>Edit</button>
             )}
 
-            <button disabled={disable} onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button disabled={disable} onClick={() => deleteTodo(todo.id)}>
+              Delete
+            </button>
           </div>
         </div>
       ))}
