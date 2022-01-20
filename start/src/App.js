@@ -29,7 +29,7 @@ function App() {
 
         {/* <TextForms/> */}
 
-        <About/>
+        {/* <About/> */}
       </div>
 
     </>

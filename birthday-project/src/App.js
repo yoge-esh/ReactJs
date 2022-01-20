@@ -1,8 +1,22 @@
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import { data } from './data'
 import "./App.css";
 
+const API = data
+
 function App() {
+
+  const getData = () =>
+  {
+    fetch(API).then(res => res.data())
+    .then(people => console.log(people))
+  }
+  useEffect(() =>{
+    setPeople(data);
+  },[])
+
+
+
   const [people, setPeople] = useState(data)
   const [searchText, setSearchText] = useState('')
 
@@ -13,6 +27,7 @@ function App() {
 
   return (
     <>
+    {/* <img src="" alt="" /> */}
     <input type="search" name="search" id="search peoples" placeholder='search here...' className='searchBar' onChange={event => {setSearchText(event.target.value)}} />
       <h3 className='birthdayTitle'>
         {people.length} birthdays today
