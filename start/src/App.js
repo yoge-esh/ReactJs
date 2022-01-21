@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar";
 import About from "./Components/About";
 import TextForms from "./Components/TextForms";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); // state variable to ckeck the dark mode enable or not to check from, here
@@ -23,15 +23,15 @@ function App() {
 
   return (
     <>
-    <Router>
-      <Navbar
-        title="Start Project"
-        aboutText="About Us"
-        mode={mode}
-        toggleMode={toggleMode}
-      />
+      <Router>
+        <Navbar
+          title="Start Project"
+          aboutText="About Us"
+          mode={mode}
+          toggleMode={toggleMode}
+        />
 
-      <div className="container my-3">
+        <div className="container my-3">
           <Switch>
             {/* home page */}
             <Route exact path="/">
@@ -46,12 +46,11 @@ function App() {
 
             {/* no mathch */}
             {/* <Route component={NoMatch} /> */}
-
           </Switch>
 
-        {/* <TextForms/> */}
-      </div>
-        </Router>
+          {/* <TextForms/> */}
+        </div>
+      </Router>
     </>
   );
 }
