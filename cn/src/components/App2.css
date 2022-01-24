@@ -1,0 +1,33 @@
+h2{
+  text-align: center;
+  color: white;
+}
+
+input[type='text']{
+  text-align: center;
+  margin-left: 400px;
+  border-radius: 2px;
+  height: 40px;
+  width: 300px;
+}
+
+button{
+  border-radius: 5px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  background: #000;
+  color: whitesmoke;
+}
+
+.content{
+  text-align: center;
+  background: orange;
+  padding: 10px;
+  margin: 20px;
+  height: 40px;
+  display: inline-table;
+  color: whitesmoke;
+  border-radius: 5px;
+
+}
