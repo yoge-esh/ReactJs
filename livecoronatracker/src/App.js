@@ -1,33 +1,53 @@
 import React from "react";
-import './App.css'
-
+import "./App.css";
 
 function App() {
-  const fname = "yogesh";
-  const curDate = new Date().toLocaleDateString();
+  let greeting = '';
+
+  let curDate = new Date();
+  curDate = curDate.getHours();
+
+  // this is for date and time 
+  const currDate = new Date().toLocaleDateString();
   const curTime = new Date().toLocaleTimeString();
-  const img1 = "https://picsum.photos/200";
-  const img2 = "https://picsum.photos/100";
-  const img3 = "https://picsum.photos/300";
+  
+  const cssStyle = {
+    color: '',
+  }
+
+  if (curDate >= 1 && curDate < 12) {
+    greeting = "Good Morning";
+    cssStyle.color = 'crimsion';
+  } else if (curDate >= 12 && curDate < 19) {
+    greeting = "Good Afternoon";
+    cssStyle.color = 'yellow';
+  } else {
+    greeting = "Good Night";
+    cssStyle.color = 'black ';
+  }
+
+  // const img1 = "https://picsum.photos/200";
+  // const img2 = "https://picsum.photos/100";
+  // const img3 = "https://picsum.photos/300";
 
   // inline css
-  const heading = {
-    textAlign: 'center',
-    color: 'crimsion',
-    textTransform: 'capatilize'
-  }
-  return (
-    <div>
-      
-      <h1 style={heading}>Welcome to React Programming with {fname}</h1>
+  // const heading = {
+  //   textAlign: "center",
+  //   color: "white",
+  //   textTransform: "capatilize",
+  //   backgroundColor: "hotpink",
+  //   borderRadius: '10px',
+  //   padding: '15px',
+  //   height: '20%',
+  // };
 
-      <p className="fix">Current Date: {curDate}</p>
-      <p className="fix">Current Time: {curTime}</p>
-      <img src={img1} alt="random images" />
-      <img src={img2} alt="random images" />
-      <a href="https://picsum.photos/" rel="noreferrer" target={'_blank'}>
-        <img src={img3} alt="random images" />
-      </a>
+  return (
+    <div className="Greeting">
+      {/* style={heading} */}
+      <h1 > Hello sir, <span style={cssStyle}> {greeting} </span></h1>
+      <br />
+      <h3>Today's Date is: { currDate }</h3>
+      <h3>Current Time is: { curTime }</h3>
     </div>
   );
 }
