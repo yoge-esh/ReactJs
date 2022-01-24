@@ -1,17 +1,13 @@
-// import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-function Router() {
-    return (
-        <div className='main-app'>
-            <Router>
+function C_Router() {
+  return <div>
+       <Router>
                 {/* content to be here to route the page */}
                 <Route path={'/'} component={homepage}/>
                 <Route path={'/contact'} component={contactPage}/>
             </Router>
-        </div>
-    )
+  </div>;
 }
 
-export default Router
-
+export default C_Router;
