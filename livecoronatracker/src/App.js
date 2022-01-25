@@ -1,21 +1,40 @@
-import React from "react";
-import * as calc from "./calculator";
+import React from 'react';
+import Card from './Card'
+import './index.css'
+import datas from './data';
 
-// const hello = 'yogesh how are u doing ?'
+
+// Normal arrow function 
+// function ncards(val) {
+//   return (
+//     <Card 
+//     imgsrc={val.imgsrc} 
+//     title = {val.title}
+//     Name={val.Name}
+//     link={val.link}
+//     />
+//   )
+// }
 
 function App() {
+
   return (
-    <div>
-      {/* -------> Calculator in react <-------- */}
-      <h1>Welcome to React Calculator</h1>
-      <h2>The Addition between two number is: {calc.Add(2, 4)}</h2>
-      <h2>The Division between two number is: {calc.Division(10, 4)}</h2>
-      <h2>The Multiplication between two number is: {calc.multi(11, 12)}</h2>
-      <h2>The Subtract between two number is: {calc.Subtract(30, 4)}</h2>
-    </div>
+  <div>
+    <h1 className='heading'>welcome to Top image Galary of the world</h1>
+      
+      {/* fat arrow function */}
+      {datas.map((val, index) => {
+        return (
+          <Card 
+          imgsrc={val.imgsrc} 
+          title = {val.title}
+          Name={val.Name}
+          link={val.link}
+          />
+        )
+      })};
+  </div>
   );
 }
 
 export default App;
-
-// we are only allowed to export only one export default so if we need to export more then we have to do folling steps
