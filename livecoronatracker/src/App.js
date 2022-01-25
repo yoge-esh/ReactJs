@@ -1,55 +1,21 @@
 import React from "react";
-import "./App.css";
+import * as calc from "./calculator";
+
+// const hello = 'yogesh how are u doing ?'
 
 function App() {
-  let greeting = '';
-
-  let curDate = new Date();
-  curDate = curDate.getHours();
-
-  // this is for date and time 
-  const currDate = new Date().toLocaleDateString();
-  const curTime = new Date().toLocaleTimeString();
-  
-  const cssStyle = {
-    color: '',
-  }
-
-  if (curDate >= 1 && curDate < 12) {
-    greeting = "Good Morning";
-    cssStyle.color = 'crimsion';
-  } else if (curDate >= 12 && curDate < 19) {
-    greeting = "Good Afternoon";
-    cssStyle.color = 'yellow';
-  } else {
-    greeting = "Good Night";
-    cssStyle.color = 'black ';
-  }
-
-  // const img1 = "https://picsum.photos/200";
-  // const img2 = "https://picsum.photos/100";
-  // const img3 = "https://picsum.photos/300";
-
-  // inline css
-  // const heading = {
-  //   textAlign: "center",
-  //   color: "white",
-  //   textTransform: "capatilize",
-  //   backgroundColor: "hotpink",
-  //   borderRadius: '10px',
-  //   padding: '15px',
-  //   height: '20%',
-  // };
-
   return (
-    <div className="Greeting">
-      {/* style={heading} */}
-      <h1 > Hello sir, <span style={cssStyle}> {greeting} </span></h1>
-      <br />
-      <h3>Today's Date is: { currDate }</h3>
-      <h3>Current Time is: { curTime }</h3>
+    <div>
+      {/* -------> Calculator in react <-------- */}
+      <h1>Welcome to React Calculator</h1>
+      <h2>The Addition between two number is: {calc.Add(2, 4)}</h2>
+      <h2>The Division between two number is: {calc.Division(10, 4)}</h2>
+      <h2>The Multiplication between two number is: {calc.multi(11, 12)}</h2>
+      <h2>The Subtract between two number is: {calc.Subtract(30, 4)}</h2>
     </div>
   );
 }
 
 export default App;
+
+// we are only allowed to export only one export default so if we need to export more then we have to do folling steps
