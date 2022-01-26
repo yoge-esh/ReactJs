@@ -1,39 +1,28 @@
-import React from 'react';
-import Card from './Card'
-import './index.css'
-import datas from './data';
+import React from "react";
+import "./index.css";
+import Images from "./Images";
+import Image_Galary from "./Image_Galary";
 
+const choice = "images";
 
-// Normal arrow function 
-// function ncards(val) {
-//   return (
-//     <Card 
-//     imgsrc={val.imgsrc} 
-//     title = {val.title}
-//     Name={val.Name}
-//     link={val.link}
-//     />
-//   )
-// }
+// the following code is shorten with turnary operator  
+// // use of if/else codition 
+// const Choices = () => {
+//   if (choice === "images") {
+//     return <Images />;
+//   } else {
+//     return <Image_Galary />;
+//   }
+// };
 
 function App() {
-
   return (
-  <div>
-    <h1 className='heading'>welcome to Top image Galary of the world</h1>
-      
-      {/* fat arrow function */}
-      {datas.map((val, index) => {
-        return (
-          <Card 
-          imgsrc={val.imgsrc} 
-          title = {val.title}
-          Name={val.Name}
-          link={val.link}
-          />
-        )
-      })};
-  </div>
+    <>
+      <h1 className="heading">welcome to Top image Galary of the world</h1>
+
+      {/* shorten the if/else condition code with trunary operator  */}
+      {choice === 'images' ? <Images /> : <Image_Galary/>}
+    </>
   );
 }
 
