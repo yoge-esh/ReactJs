@@ -3,7 +3,7 @@ import "./index.css";
 import Images from "./Images";
 import Image_Galary from "./Image_Galary";
 
-const choice = "images";
+const choice = "image_Galary";
 
 // the following code is shorten with turnary operator  
 // // use of if/else codition 
