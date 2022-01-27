@@ -2,8 +2,8 @@ import React from "react";
 import './Health.css'
 function Health() {
   return (
-    <div>
-      <p className="health">Welcome to Health Page</p>
+    <div className="health"> 
+      <p>Welcome to Health Page</p>
     </div>
   );
 }

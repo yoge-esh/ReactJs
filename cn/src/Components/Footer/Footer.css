@@ -5,11 +5,11 @@
 .Footer{
     background-color: black;
     color: white;
-    margin-top: 500px;
     text-align: center;
+    padding-top: 10px;
+    height: 40px;
+    margin-top: -10px;
 }
 .Footer h3{
     font-size: 1.2rem;
-    height: 100px;
-    padding-top: 50px;
 }

@@ -1,40 +1,65 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.main-container{
-    background-color: gray;
-    margin: 0 130px;
-    height: 100vh;
+.main-container {
+  background-color: gray;
+  margin: 0 130px;
+  height: 100vh;
 }
-.container{
-    background-color: black;
-    color: white;
-    padding: -1px;
+.container {
+  background-color: black;
+  color: white;
+  padding: -1px;
+  height: 60px;
 }
-.container h2{
-    background-color: red;
-    color: #fff;
-    display: block;
-    height: 50px;
-    width: 95px;;
-    font-size: 1rem;
-    position: absolute;
-    top: 0;
-    margin-top: 5px;
-    margin-left: 20px;
-    padding-top: 15px;
-    padding-left: 10px;
-    z-index: 3;
-    cursor: pointer;
+.container h2 {
+  background-color: red;
+  color: #fff;
+  display: block;
+  height: 50px;
+  width: 95px;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  margin-top: 5px;
+  padding-top: 15px;
+  padding-left: 10px;
+  z-index: 3;
+  cursor: pointer;
 }
-.container p{
-    margin-left: 130px;
-    padding-top: 15px;
-    font-weight: 500;
+.container p {
+  margin-left: 120px;
+  padding-top: 15px;
+  font-weight: 500;
 }
-
-.center{
+.container span{
+  color: crimson;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.navbar {
+  display: block;
+  align-items: center;
+  justify-content: space-between; 
+  margin-top: -10px;
+  color: black;
+}
+.inner-nav{
+  background-color: white;
+  color: crimson;
+  text-align: center;
+}
+.inner-card{
+    padding: 0px 10%;
+    color: crimson;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.inner-cards{
     background-color: white;
-    color: vlack;
+    color: crimson;
+    text-align: center;
 }
