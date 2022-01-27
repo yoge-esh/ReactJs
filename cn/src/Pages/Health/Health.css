@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.health {
+    color: white;
+    background-color: violet;
+    margin-top: 30px;
+}
