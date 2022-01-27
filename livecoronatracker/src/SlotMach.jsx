@@ -6,7 +6,7 @@ import "./index.css";
 const SlotM = (props) => {
 let {x, y, z} = props
 
-return  x===y && x === z? <True/> :<False/>
+return  x===y && x === z? <True {...props}/> :<False {...props}/>
 
 }
 

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: gray;
+}
+
+.heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 20%;
+    color: black;
+
+}
+span{
+    color: white;
+}
+button{
+    padding: 10px;
+    background-color: crimson;
+    color: white;
+    border: 1px solid gray;
+    cursor: pointer;
+    margin: 15px 45%;
+    width: 130px;
+    border-radius: 10px;
+
+}
+button:hover{
+    background-color: white;
+    color: crimson;
+    padding: 11px;
+    font-weight: 700;
+}
