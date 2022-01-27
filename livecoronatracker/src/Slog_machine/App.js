@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import SlotM from "./SlotMach";
+import { SlotM } from "./SlotMach";
 function App() {
   return (
     <>
@@ -11,7 +11,7 @@ function App() {
         <SlotM x = '😊' y='😊' z = '😊'/>
         <SlotM x = '😞' y='😊' z = '😊'/>
         <SlotM x = '😊' y='😞' z = '😊'/>
-        <SlotM x = '😊' y='😞' z = '😞'/>
+        <SlotM x = '😊' y='😊' z = '😊'/>
         
       </div>
     </>
