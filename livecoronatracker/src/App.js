@@ -1,20 +1,16 @@
-import React from "react";
-import "./index.css";
-import { SlotM } from "./SlotMach";
+import React from 'react';
+import './App.css'
+
 function App() {
-  return (
-    <>
-      <h2 className="heading_style">
-        welcome to <span style={{ fontWeight: "bold" }}> slot machine </span>
-      </h2>
-      <div className="slotmachine">
-        <SlotM x = '😊' y='😊' z = '😊'/>
-        <SlotM x = '😞' y='😊' z = '😊'/>
-        <SlotM x = '😊' y='😞' z = '😊'/>
-        <SlotM x = '😊' y='😊' z = '😊'/>
-        
-      </div>
-    </>
+
+  const bgChnage = () =>{
+    console.log('clicke!')
+  }
+  return(
+  <div style={ {backgroundColor: "crimsion"} }>
+      <h2>Welcome to Events in React Js </h2>
+      <button onClick={bgChnage}>Click me</button>
+  </div>
   );
 }
 

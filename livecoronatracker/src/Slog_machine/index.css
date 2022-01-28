@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d2dbdd;
+}
+
+.heading_style{
+    padding: 30px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: #fff;
+    font-size: 1.5rem;
+    /* margin-bottom: 30px; */
+}
+
+.slot_inner{
+    text-align: center;
+    padding-top: 10px;
+}
+.slotmachine{
+    margin-left: 42.5%;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 5px solid grey;
+}
