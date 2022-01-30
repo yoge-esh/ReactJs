@@ -46,10 +46,13 @@
   color: black;
 }
 .inner-nav{
-  background-color: white;
-  color: crimson;
+  background-color: cadetblue;
+  color: black;
   text-align: center;
+  padding: 0 30%;
+
 }
+
 .inner-card{
     padding: 0px 10%;
     color: crimson;

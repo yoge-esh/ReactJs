@@ -7,12 +7,16 @@ body{
     color: white;
 }
 div{
-    margin: 20% 0%;
+    margin: 10% 0%;
     text-align: center;
 }
 h2{
     padding: 10px;
     font-size: 1.5rem;
+}
+p{
+    padding: 2px 4px;
+    font-size: 1rem;
 }
 input{
     padding: 10px;
